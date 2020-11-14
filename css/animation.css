@@ -1,0 +1,35 @@
+@keyframes lion {
+    0% {
+        position: absolute; top: 50%; left: 50.3%;
+        transform: translate(-50.3%, -50%);
+    }
+    30% {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    70% {
+        position: absolute; top: 50%; left: 50.3%;
+        transform: translate(-50.3%, -50%);
+    }
+    100% {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes apeach {
+    0% {
+        /* transform: scale(0.8); */
+    }
+    30% {
+        
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    70% {
+        /* transform: scale(1); */
+    }
+    100% {
+        
+    }
+}

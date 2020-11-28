@@ -7,14 +7,42 @@
 }
 body, html {
     height: 100%; width: 100%;
+    scroll-behavior: smooth;
 }
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
 #section {
     height: 100%;
 }
 
+#header {
+    position: fixed; top: 0px; left: 0px; right: 0px;
+    z-index: 9999999999;
+}
+#header ul {
+    background: rgba(255,255,255,0.5);
+    font-size: 20px; font-weight: bold;
+    overflow: hidden;
+}
+#header ul li {
+    float: left;
+    border-right: 2px solid #000;
+    padding: 5px 10px;
+    width: 150px;
+    text-align: center;
+}
 
 
-/* 라이언 */
+/* 라이언----------------------------------------------------------------------------------- */
 .article1 {
     background: #313654;
     height: 100%;
@@ -121,7 +149,7 @@ body, html {
 
 
 
-/* 어피치 */
+/* 어피치------------------------------------------------------------------------------- */
 .article2 {
     background: rgb(249, 209, 211);
     height: 100%;
@@ -318,3 +346,50 @@ body, html {
     background: rgb(249, 209, 211);
     z-index: 2;
 }
+
+
+/* 미키마우스------------------------------------------------------------------------------- */
+.article3 {
+    height: 100%;
+    background: rgba(154,205,50,1);
+    position: relative;
+}
+.mickey {
+    width: 400px; height: 400px;
+    position: absolute; top: 60%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+    border-radius: 50%;
+}
+.mickey .ear {
+    width: 300px; height: 300px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+}
+.mickey .ear.left {
+    bottom: 100%;
+    right: 100%;
+    margin: 0px -110px -110px 0px;
+}
+.mickey .ear.right {
+    bottom: 100%;
+    left: 100%;
+    margin: 0px 0px -110px -110px;  
+}
+.mickey .face {
+    width: 400px; height: 400px;
+    background: black;
+    border-radius: 50%;
+}
+.mickey
+.mickey
+.mickey
+.mickey
+.mickey
+.mickey
+.mickey
+.mickey
+.mickey
+.mickey
+.mickey

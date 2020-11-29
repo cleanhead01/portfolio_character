@@ -351,45 +351,134 @@ a {
 /* 미키마우스------------------------------------------------------------------------------- */
 .article3 {
     height: 100%;
-    background: rgba(154,205,50,1);
+    background: skyblue;
     position: relative;
 }
-.mickey {
+/* 얼굴 본판 */
+.bonobono {
     width: 400px; height: 400px;
     position: absolute; top: 60%; left: 50%;
     transform: translate(-50%, -50%);
-    background: red;
+    background: #fff;
+    border-radius: 50%; border: 3px solid black;
+}
+/* 얼굴 */
+.bonobono .face {
+    width: 390px; height: 390px;
+    background: skyblue;
+    border-radius: 50%; border-bottom: 3px solid black;
+    position: absolute; left: 50%; bottom: 0px;
+    transform: translateX(-50%);
+    margin-bottom: -3px;
+    /* 보더 굵기만큼 곂치게 마진 음수값 */
+}
+/* 눈 */
+.bonobono .eye {
+    position: absolute; bottom: 55%;
+    width: 25px; height: 25px;
+    background: #000;
     border-radius: 50%;
 }
-.mickey .ear {
-    width: 300px; height: 300px;
-    background: black;
+.bonobono .e-left {
+    left: 40px;
+}
+.bonobono .e-right {
+    right: 40px;
+}
+/* 코 */
+.bonobono .nose {
+    position: absolute; top: 50%; left: 50%;
+    transform: translateX(-50%);
+    width: 40px; height: 40px;
     border-radius: 50%;
+    background: #000;
+    z-index: 99999;
+}
+/* 입 */
+.bonobono .mouth {
+    position: relative;
+    width: 70px; height: 70px;
+    background: #fff;
+    border: 3px solid #000;
+}
+/* 입왼쪽 */
+.bonobono .mouth.m-left {
+    border-bottom-left-radius: 50%; border-bottom-right-radius: 50%; border-top-left-radius: 50%;
+    transform: rotate(-10deg);
+    position: absolute; top: 55%; right: 49%;
+}
+/* 입오른쪽 */
+.bonobono .mouth.m-right {
+    border-bottom-left-radius: 50%; border-bottom-right-radius: 50%; border-top-right-radius: 50%;
+    transform: rotate(10deg);
+    position: absolute; top: 55%; left: 49%;
+}
+/* 수염 */
+.bonobono .mouth span {
+    display: inline-block;
+    width: 50px; height: 4px;
+    background: #000;
     position: absolute;
 }
-.mickey .ear.left {
-    bottom: 100%;
-    right: 100%;
-    margin: 0px -110px -110px 0px;
+.bonobono .mouth.m-left span:nth-child(1) {
+    transform: rotate(30deg);
+    top: 0px; right: 50%;
 }
-.mickey .ear.right {
-    bottom: 100%;
-    left: 100%;
-    margin: 0px 0px -110px -110px;  
+.bonobono .mouth.m-left span:nth-child(2) {
+    transform: rotate(10deg);
+    top: 20px; right: 70%;
 }
-.mickey .face {
-    width: 400px; height: 400px;
-    background: black;
-    border-radius: 50%;
+.bonobono .mouth.m-left span:nth-child(3) {
+    transform: rotate(-20deg);
+    top: 50px; right: 65%;
 }
-.mickey
-.mickey
-.mickey
-.mickey
-.mickey
-.mickey
-.mickey
-.mickey
-.mickey
-.mickey
-.mickey
+.bonobono .mouth.m-right span:nth-child(1) {
+    transform: rotate(-30deg);
+    top: 0px; left: 50%;
+}
+.bonobono .mouth.m-right span:nth-child(2) {
+    transform: rotate(-10deg);
+    top: 20px; left: 70%;
+}
+.bonobono .mouth.m-right span:nth-child(3) {
+    transform: rotate(20deg);
+    top: 50px; left: 65%;
+}
+/* 땀표시 */
+.bonobono .sweat {
+    position: relative;
+}
+.bonobono .sweat > div {
+    position: absolute;
+    width: 300px; height: 30px;
+    /* background: #000; */
+    text-align: right;
+    transform: rotate(30deg);
+    opacity: 0;
+}
+.bonobono .face:hover + .sweat > div:nth-child(1) {
+    bottom: 100%; left: 50%;
+    animation: bonobono 2s infinite linear;
+}
+.bonobono .face:hover + .sweat > div:nth-child(2) {
+    bottom: 100%; left: 60%;
+    margin-bottom: 50px;
+    animation: bonobono 2s 0.5s infinite linear;
+}
+.bonobono .face:hover + .sweat > div:nth-child(3) {
+    bottom: 100%; left: 70%;
+    margin-bottom: 100px;
+    animation: bonobono 2s 1s infinite linear;
+}
+.bonobono .face:hover + .sweat > div:nth-child(4) {
+    bottom: 100%; left: 80%;
+    margin-bottom: 150px;
+    animation: bonobono 2s 1.5s infinite linear;
+}
+.bonobono .sweat > div span {
+    display: inline-block;
+    width: 50px; height: 30px;
+    border-top-left-radius: 50%; border-top-right-radius: 50%;
+    background: #fff;
+    margin: 0px 10px;
+}

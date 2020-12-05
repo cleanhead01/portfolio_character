@@ -44,3 +44,18 @@
         opacity: 1;
     }
 }
+@keyframes pengsoo {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(150px);
+    }
+}

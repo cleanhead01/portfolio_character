@@ -726,14 +726,35 @@ a {
 .pengsoo .face-back .cheek.right {
     right: 5px;
 }
-.pengsoo .sweat {
-    position: absolute; top: 20%; right: 10%;
-    background: skyblue;
-    /* transform: rotate(-30deg); */
+/* 땀 */
+.pengsoo .face-back + .sweat {
+    position: relative;
+    opacity: 0;
+    z-index: 999999999999999999999999999;
+    transform: translateY(100px);
+}
+.pengsoo .face-back:hover + .sweat {
+    position: relative;
+    opacity: 0;
+    z-index: 999999999999999999999999999;
+    transform: translateY(100px);
+    animation: pengsoo 1s both linear;
+}
+.pengsoo .sweat span:nth-child(1) {
+    display: inline-block;
+    position: absolute; top: 0px; right: 10%;
+    background: linear-gradient(to top, deepskyblue, white, white, rgba(255,255,255,0));
     width: 50px; height: 100px;
-    border-radius: 50%; border: 3px solid #000;
-    /* border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%; */
+    border-radius: 50%; 
+    /* border: 3px solid #000; */
+    z-index: 999999999999999999999999999;
+}
+.pengsoo .sweat span:nth-child(2) {
+    display: inline-block;
+    position: absolute; top: 0px; right: 20%;
+    background: linear-gradient(to top, deepskyblue, white, white, rgba(255,255,255,0));
+    width: 30px; height: 70px;
+    border-radius: 50%; 
+    /* border: 3px solid #000; */
     z-index: 999999999999999999999999999;
 }

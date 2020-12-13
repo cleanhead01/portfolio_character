@@ -923,3 +923,168 @@ a {
     width: 50px; height: 90px;
     background: #fff;
 }
+
+
+/* 뿌까------------------------------------------------------------------------------- */
+.article6 {
+    height: 100%;
+    background: #f00;
+    position: relative;
+}
+.pucca {
+    width: 450px; height: 400px;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 머리 */
+.pucca .hair {
+    width: 230px; height: 230px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute; bottom: 60%;
+}
+/* 머리 왼쪽 */
+.pucca .hair.left {
+    right: 75%;
+}
+/* 머리 오른쪽 */
+.pucca .hair.right {
+    left: 75%;
+}
+/* 머리띠 */
+.pucca .hair .band {
+    width: 130px; height: 130px;
+    background: #ff0;
+    border-radius: 50%;
+    position: absolute; top: 50%;
+}
+/* 머리띠 왼쪽 */
+.pucca .hair.left .band {
+    left: 55%;
+}
+/* 머리띠 오른쪽 */
+.pucca .hair.right .band {
+    right: 55%;
+}
+/* 얼굴배경 */
+.pucca .face-back {
+    width: 450px; height: 400px;
+    background: #000;
+    border-radius: 50% 50% 45% 45%;
+    position: relative;
+}
+/* 얼굴 */
+.pucca .face-back .face {
+    width: 400px; height: 300px;
+    background: #fcded4;
+    position: absolute; bottom: 10px; left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 45% 45%;
+    overflow: hidden;
+}
+/* 눈썹 */
+.pucca .face-back .face .eyebrow {
+    width: 100px; height: 50px;
+    /* background: #000; */
+    position: absolute; top: 20%;
+    border-radius: 50%; border: 10px solid #000;
+}
+/* 왼쪽 눈썹 */
+.pucca .face-back .face .eyebrow.left {
+    left: 0%;
+    transform: rotate(0deg);
+}
+.pucca .face-back .face .eyebrow.left::before {
+    content: "";
+    width: 100px; height: 30px;
+    background: #fcded4;
+    position: absolute; bottom: -10px; left: -10px;
+}
+/* 오른쪽 눈썹 */
+.pucca .face-back .face .eyebrow.right {
+    right: 0%;
+    transform: rotate(0deg);
+}
+.pucca .face-back .face .eyebrow.right::before {
+    content: "";
+    width: 100px; height: 30px;
+    background: #fcded4;
+    position: absolute; bottom: -10px; right: -10px;
+}
+/* 눈 */
+.pucca .face-back .face .eye {
+    width: 130px; height: 10px;
+    background: #000;
+    position: absolute; top: 50%;
+    border-radius: 10px;
+}
+/* 왼쪽 눈 */
+.pucca .face-back .face .eye.left {
+    left: 5%;
+    transform: rotate(15deg);
+}
+/* 오른쪽 눈 */
+.pucca .face-back .face .eye.right {
+    right: 5%;
+    transform: rotate(-15deg);
+}
+/* 웃는 입 */
+.pucca .face-back .face .smile {
+    width: 70px; height: 60px;
+    border-radius: 50%; border: 10px solid #000;
+    position: absolute; bottom: 30px; left: 50%;
+    transform: translateX(-50%);
+}
+.pucca .face-back .face .smile::before {
+    content: "";
+    width: 70px; height: 30px;
+    background: #fcded4;
+    position: absolute; top: -10px; left: -10px;
+}
+.pucca .face-back .face .smile span {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: hotpink;
+    position: absolute; top: -10px;
+}
+.pucca .face-back .face .smile span:nth-child(1) {
+    right: 250%;
+}
+.pucca .face-back .face .smile span:nth-child(2) {
+    left: 250%;
+}
+/* 호버하면 웃는입 실종 */
+.pucca:hover .face-back .face .smile {
+    display: none;
+}
+/* 입 */
+.pucca .face-back .face .mouth {
+    width: 300px; height: 70px;
+    background: #fff;
+    border: 10px solid #000; border-radius: 100% 100% 500% 500%;
+    position: absolute; bottom: 30px; left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    display: none;
+}
+
+/* 이빨 */
+.pucca .face-back .face .mouth span {
+    display: inline-block;
+    width: 10px; height: 90px;
+    background: #000;
+    position: absolute;
+}
+.pucca .face-back .face .mouth span:nth-child(1) {
+    left: 20%;
+}
+.pucca .face-back .face .mouth span:nth-child(2) {
+    left: 50%;
+}
+.pucca .face-back .face .mouth span:nth-child(3) {
+    right: 20%;
+}
+.pucca:hover .face-back .face .mouth {
+    display: block;
+}

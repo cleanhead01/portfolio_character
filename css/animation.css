@@ -59,3 +59,31 @@
         transform: translateY(150px);
     }
 }
+@keyframes molang-left {
+    0% {
+        transform: rotate(15deg);
+        transform-origin: right center;
+    }
+    50% {
+        transform: rotate(45deg);
+        transform-origin: right center;
+    }
+    100% {
+        transform: rotate(15deg);
+        transform-origin: right center;
+    }
+}
+@keyframes molang-right {
+    0% {
+        transform: rotate(-15deg);
+        transform-origin: left center;
+    }
+    50% {
+        transform: rotate(-45deg);
+        transform-origin: left center;
+    }
+    100% {
+        transform: rotate(-15deg);
+        transform-origin: left center;
+    }
+}
